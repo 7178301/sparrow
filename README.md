@@ -1,1 +1,22 @@
-# sparrow
+# Sparrow
+INSERT ABOUT PROJECT HERE
+
+##Documents
+###APIDescription
+ABOUT API DOCUMENT HERE
+###codingStandards
+ABOUT CODING DOCUMENT HERE
+###fileFolderStandards
+ABOUT FILEOLDER DOCUMENT HERE
+###repositoryStandards
+ABOUT REPOSITORY DOCUMENT HERE
+
+##Branching
+ABOUT BRANCING HERE
+
+##Development Team
+DEVELOPMENT TEAM INFOR HERE
+
+NAME (ROLE) CONTACT METHOD
+
+Nicholas Alards (Nil) 7178301@student.swin.edu.au
