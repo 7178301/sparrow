@@ -35,7 +35,7 @@ This is the class that the end user will use. There will need to be a way to cho
 		Turns a particular module on for system runtime
 	setModule(Module)
 		Sets an attribute within a module  
-###Configeration Module (Drone Interface)
+###SDK Interface Module (Drone Interface)
 ####Attributes:
 	getAPIVersion
 		returns the API version running on the drone.  (Compatibility of features safeguard)
@@ -63,9 +63,6 @@ This should be a basic coordinate, and should be usable with both relative posit
 		enable or disable camera  
 	enableRangeSensor()
 		the range sensors, even amongst the same drone the sensors might be different  
-###Mapping Module
-####Attributes
-####Methods
 ###Android Module
 ####Attributes
 ####Methods
