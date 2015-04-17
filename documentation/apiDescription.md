@@ -21,7 +21,12 @@ Units only have to be entered in one standard and internal conversions will appl
   	public RelativePosition add(RelativePosition b);
   	public RelativePosition minus(RelativePosition b);
   }
-  class GPSPosition extends Position {
+  class AbsolutePosition extends Position {
+  	public GPSPosition add(RelativePosition b);
+  	public GPSPosition minus(RelativePosition b);
+  	public RelativePosition minus(GPSPosition b);
+  }
+  class GPSPosition extends AbsolutePosition {
   	public GPSPosition add(RelativePosition b);
   	public GPSPosition minus(RelativePosition b);
   	public RelativePosition minus(GPSPosition b);
@@ -35,27 +40,22 @@ Units only have to be entered in one standard and internal conversions will appl
   	Bearing add(Bearing b)
   }
 )
-###Examples
-
-- Speed
-	- 	km/h
-	- 	knots
-	- 	miles/hour
-- Distance
-	- 	feet
-	- 	metres
-- Bearing
-	- 	degrees
 
 ###SDK Interface Module (Drone Interface)
 ![Alt text](http://g.gravizo.com/g?
   interface DroneAPI {
         static private int apiVersion;
+        private AbsolutePosition home;
+        private AbsolutePosition currentPosition;
         public int getAPIVersion();
-        public void flyTo(Position pos, Bearing bear, Double speed);
-        public void takeOff(Position pos);
-        public void land(Position pos);
+        public abstract void flyTo(Position pos, Bearing bear, Double speed);
+        public abstract void takeOff(Position pos);
+        public abstract void land(Position pos);
         public void wait(Double time);
+        public void setHome(AbsolutePosition pos);
+	public Position getPosition();
+	public RelativePosition getDistanceToHome();
+	public void flyHome(Bearing bear, Double speed);
   }
 )
 ###Camera Interface Module
