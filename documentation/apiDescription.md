@@ -35,6 +35,7 @@ Units only have to be entered in one standard and internal conversions will appl
 ###Bearing Type
 ![Alt text](http://g.gravizo.com/g?
   class Bearing {
+  	private Double degrees;
   	Bearing(double);
   	String toString() //output degrees minutes seconds
   	Bearing add(Bearing b)
