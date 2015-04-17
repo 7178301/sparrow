@@ -21,10 +21,10 @@ Units only have to be entered in one standard and internal conversions will appl
   	public RelativePosition add(RelativePosition b);
   	public RelativePosition minus(RelativePosition b);
   }
-  class AbsolutePosition extends Position {
-  	public AbsolutePosition add(RelativePosition b);
-  	public AbsolutePosition minus(RelativePosition b);
-  	public RelativePosition minus(AbsolutePosition b);
+  class GPSPosition extends Position {
+  	public GPSPosition add(RelativePosition b);
+  	public GPSPosition minus(RelativePosition b);
+  	public RelativePosition minus(GPSPosition b);
   }
 )
 ###Bearing Type
