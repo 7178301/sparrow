@@ -8,8 +8,8 @@ package api;
  * 
  */
 
-public interface Position {
-	public double Latitud = 0.0;
-	public double Longtitude = 0.0;
-	public double Altitude = 0.0;
+public class Position {
+	public double latitud = 0.0;
+	public double longtitude = 0.0;
+	public double altitude = 0.0;
 }

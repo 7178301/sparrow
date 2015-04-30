@@ -12,14 +12,13 @@ import api.*;
 
 public class Nest{
 	Drone drone;
+	Position home;
 
-	public Boolean flyTo(Position destination) {
+	public Boolean flyTo(Position destination,double speed) {//default speed?
 		if (drone.ready==true){
-			if (destination.Altitude!=drone.Position.Altitude)
-				changeAltitude(destination.Altitude);
-			/************************************************************/
-			//how do we actually fly? :/ 
-			/************************************************************/
+			if (destination.altitude!=drone.position.altitude)
+				drone.changeAltitude(destination.altitude);//callback?
+			drone.linearFlyTo(destination.latitud, destination.longtitude);
 			return true;
 		}
 		else
@@ -28,32 +27,34 @@ public class Nest{
 
 	public Boolean takeOff(double altitude) {
 		if (drone.ready==true){
-			// Get motors ready, start up, take off to reach the point of altitude.
-			// Check altitude before starting.
+			drone.changeAltitude(altitude,drone.minSpeed);
 			return true;
 		}
 		else
 			return false;
 	}
-	
+		
 	public Boolean land(double speed) {
-		// Check the speed, hover for a bit, reduce altitude till land.
-		// Shutting the motors down (?)
+		hover(2000);
+		//change the altitude for the following
+		drone.changeAltitude(home.altitude,drone.minSpeed);//lands in the same altitude as it took off from.
+		drone.shutDown();
 		return null;
 	}
 
 	public Boolean hover(long milsec){
 		try{
 			wait(milsec);
+			//Can we somehow bring the speed to zero?
 			return true;
 		}
 		catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return false;
 		}
+		return false;
 	}
 
+	//how to say if a drone is capable of taking photos or not?
 	public String takePhoto() {
 		// 1. Check camera. 
 		// 2. if okay, try taking a photo.
@@ -64,26 +65,42 @@ public class Nest{
 
 	public double getAltitude() {
 		// Read altitude, return it.
-		return (Double) null;
+		return drone.position.altitude;
 	}
 
 	public Boolean setHome(Position p) {
 		// make a milestone, call it home.
-		return null;
+		try{
+			this.home=p;
+			return true;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		return false;
 	}
-
+	
+	//this needs work
 	public double distanceToHome() {
-		// get home, get place, what's the distance? use 3d geometry
-		return (Double) null;
+		//use geometry?
+		return 0;
 	}
 
-	public Boolean flyHome() {
-		// flyTo method using home point. 
+	public Boolean flyHome(double speed) {
+		flyTo(home, speed); 
 		return null;
 	}
+	
+	public boolean start(){
+		try{
+			drone.init();
+			return true;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		return false;
+		
+	};
 
-	public Boolean changeAltitude(double altitude) {
-		// check motors, check whether it should go up or down, ascend or descend respectively
-		return null;
-	}
 }

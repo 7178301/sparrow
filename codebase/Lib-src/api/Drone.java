@@ -9,9 +9,19 @@ package api;
  */
 
 public interface Drone {
-	public static boolean ready = false;
-	public static Position Position = null;
-	public static Position Home = null;
-	public void init();// Connect the adaptor and get ready (?)
-	public boolean flyInALine();
+	boolean ready = false;
+	Position position = null;
+	double minSpeed = 0;
+	double maxSpeed = 0;
+	
+	void init();
+	boolean linearFlyTo(double latitude, double longtitude, double speed); 
+	boolean linearFlyTo(double latitude, double longtitude); 
+	boolean changeAltitude(double altitude,double speed);
+	boolean changeAltitude(double altitude);
+	double getSpeed();
+	void shutDown();
 }
+
+
+//What if a drone needs to constantly update its position?
