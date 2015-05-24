@@ -1,0 +1,9 @@
+au.edu.swin.sparrow
+au.edu.swin.sparrow.api
+au.edu.swin.sparrow.api.navigation
+au.edu.swin.sparrow.api.navigation.mapping
+au.edu.swin.sparrow.api.navigation.simulations
+au.edu.swin.sparrow.api.sdkInterface
+au.edu.swin.sparrow.api.sdkInterface.adapters
+au.edu.swin.sparrow.api.sdkInterface.positioning
+au.edu.swin.sparrow.api.sdkInterface.sensors

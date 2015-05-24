@@ -1,12 +1,16 @@
-package test;
+package au.edu.swin.sparrow.api;
+
+import au.edu.swin.sparrow.api.sdkInterface.positioning.RelativePosition;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricGradleTestRunner;
+import org.robolectric.annotation.Config;
 
-import sdkInterface.RelativePosition;
-
-public class testRelativePosition {
+//@Config(manifest = "../app/src/main/AndroidManifest.xml")
+public class RelativePositionTest {
 
 	@Test
 	public void testToString() {
