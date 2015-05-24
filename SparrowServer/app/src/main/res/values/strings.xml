@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">SparrowServer</string>
-    <string name="button1">Run</string>
-    <string name="button2">Close</string>
-    <string name="button3">Options</string>
-    <string name="button4">Options2</string>
-    <string name="action_settings">Settings</string>
-</resources>
