@@ -12,13 +12,11 @@
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
       <library name="Gradle: bouncycastle">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/bouncycastle.jar!/" />
-          <root url="jar://$MODULE_DIR$/libs/bouncycastle.jar!/" />
           <root url="jar://$MODULE_DIR$/libs/bouncycastle.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -29,8 +27,6 @@
       <library name="Gradle: dji-core">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/dji-core.jar!/" />
-          <root url="jar://$MODULE_DIR$/libs/dji-core.jar!/" />
-          <root url="jar://$MODULE_DIR$/libs/dji-core.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -39,8 +35,6 @@
     <orderEntry type="module-library" exported="">
       <library name="Gradle: dji-sdk">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/dji-sdk.jar!/" />
-          <root url="jar://$MODULE_DIR$/libs/dji-sdk.jar!/" />
           <root url="jar://$MODULE_DIR$/libs/dji-sdk.jar!/" />
         </CLASSES>
         <JAVADOC />
