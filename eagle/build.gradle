@@ -28,6 +28,3 @@ task copyDeps(type: Copy) {
     from 'build/libs'
     into '../sparrow/app/libs'
 }
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.4'
-}
