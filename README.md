@@ -1,6 +1,14 @@
 # Sparrow
 INSERT ABOUT PROJECT HERE
 
+##Eagle
+Gradle Project: eagle
+Tasks: clean test assemble javadoc javadocClean javadocCopy jarMake jarCopy
+
+##Sparrow
+Gradle Project: sparrow
+Tasks: clean check assemble
+
 ##Documentation
 All relevant project documentation will be found in the documentation folder.  
 If you have any further questions, please contact a member form the development team.
