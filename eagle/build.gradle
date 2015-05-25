@@ -14,8 +14,8 @@ dependencies {
 }
 
 
-task javadocClean(type: Delete) {
-    delete fileTree(dir: "../documentation/javadoc")
+task eagleClean(type: Delete) {
+    //delete fileTree(dir: "../documentation/javadoc")
     delete fileTree(dir: "build/libs")
 }
 

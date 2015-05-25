@@ -3,7 +3,7 @@ INSERT ABOUT PROJECT HERE
 
 ##Eagle
 Gradle Project: eagle
-Tasks: clean test assemble javadoc javadocClean javadocCopy jarMake jarCopy
+Tasks: clean test assemble javadoc eagleClean jarMake jarCopy
 
 ##Sparrow
 Gradle Project: sparrow
