@@ -47,44 +47,35 @@ Units only have to be entered in one standard and internal conversions will appl
 
 ###SDK Adaptor (Drone Interface)
 ![Alt text](http://g.gravizo.com/g?
-  abstract DroneAPI {
-  
+  abstract DroneAPI {  
   	private String sdkVersion;
   	private String adaptorVersion;
-
   	public abstract void init();
   	public abstract void shutDown();
   	public abstract String getAdaptorVersion();
-
   	public abstract boolean flyToRelative(RelativePosition position, double speed);
   	public abstract boolean flyToRelative(RelativePosition position);
-
   	public abstract boolean flyToAbsolute(AbsolutePosition position, double speed);
   	public abstract boolean flyToAbsolute(AbsolutePosition position);
-
   	public abstract boolean changeLongitudeRelative(double altitude,double speed);
   	public abstract boolean changeLongitudeRelative(double altitude);
   	public abstract boolean changeLatitudeRelative(double altitude,double speed);
   	public abstract boolean changeLatitudeRelative(double altitude);
   	public abstract boolean changeAltitudeRelative(double altitude,double speed);
   	public abstract boolean changeAltitudeRelative(double altitude);
-
   	public abstract boolean changeLongitudeAbsolute(double altitude,double speed);
   	public abstract boolean changeLongitudeAbsolute(double altitude);
   	public abstract boolean changeLatitudeAbsolute(double altitude,double speed);
   	public abstract boolean changeLatitudeAbsolute(double altitude);
   	public abstract boolean changeAltitudeAbsolute(double altitude,double speed);
   	public abstract boolean changeAltitudeAbsolute(double altitude);
-
   	public abstract boolean changeYaw(double yaw);
-
   	public abstract double getLongitude();
   	public abstract double getLatitude();
   	public abstract double getAltitude();
   	public abstract double getRoll();
   	public abstract double getPitch();
   	public abstract double getYaw();
-
   	public abstract boolean getFlagReady();
   }
 )
